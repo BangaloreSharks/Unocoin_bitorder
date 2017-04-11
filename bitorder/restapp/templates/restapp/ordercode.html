@@ -1,0 +1,38 @@
+<html>
+<head>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+  <script>
+  function addItem(id) {
+    var elements = document.getElementsByClassName("item");
+    console.log(elements)
+    var sum = 0
+    for(var i=0; i<elements.length; i++) {
+      sum += parseInt(elements[i].value) * parseFloat(document.getElementById('p_'+elements[i].name).innerHTML)
+    }
+    document.getElementById('total').value=sum;
+  }
+  </script>
+</head>
+<body>
+  <div class="container">
+  </br></br></br></br></br>
+    <div class="row">
+      <p class="flow-text center-align">
+        order id :{{orderid}}
+      </p>
+    </div>
+  </div>
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js'></script>
+  <script>
+    $(document).ready(function() {
+      $('select').material_select();
+    });
+  </script>
+</body>
+</html>
